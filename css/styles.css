@@ -1,0 +1,246 @@
+/* ----------------Змінні */
+/* --Колір-- */
+:root {
+  --color-2e2f4: #2e2f42;
+  --color-e7e9fc: #e7e9fc;
+}
+/* ----------------Reset styles */
+.list {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+/* в body також можна вказати 
+  font-size: ;
+  font-weight: ;
+  color: ;
+  background-color: ; */
+*,
+*:after,
+*:before {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+img {
+  display: block;
+}
+/* max-width: 100%;
+  height: auto; */
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+address {
+  font-style: normal;
+}
+input,
+textarea {
+  outline: none;
+}
+/* -------------------Основні стилі Components*/
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  background-color: #eccb91;
+}
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #790f70;
+  z-index: 3;
+}
+.container {
+  padding: 15px;
+  margin: 0px auto;
+  max-width: 1180px;
+  outline: 2px solid rebeccapurple;
+}
+.header-body {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-logo {
+  flex: 0 0 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+}
+.header-logo img {
+  max-width: 100%;
+  /* display: block; */
+}
+.header-burger {
+}
+.header-navigation {
+}
+/* --Бургер через бефор-- */ /* Кнопка мобільного меню через бефор css */
+@media screen and (max-width: 767px) {
+  .header-body {
+    padding: 5px;
+  }
+  .header-burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    z-index: 3;
+  }
+  .header-burger span {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 100%;
+    height: 2px;
+    background-color: wheat;
+    border-radius: 1px;
+  }
+  .header-burger:before,
+  .header-burger:after {
+    content: ' ';
+    background-color: wheat;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 1px;
+  }
+  .header-burger:before {
+    top: 0;
+  }
+  .header-burger:after {
+    bottom: 0;
+  }
+  .header-navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #5cf673;
+  }
+}
+
+.header-navig-list {
+  display: flex;
+}
+.header-navig-item {
+  margin: 0 20px 0 0;
+}
+.header-navig-link {
+  color: beige;
+  text-transform: uppercase;
+}
+
+/* -------------------- */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.no-scroll {
+  overflow: hidden;
+}
+/* ------------------------Header---- */
+
+.logo-header {
+  width: ;
+}
+.header-navigation {
+  outline: 1px solid red;
+}
+/* --Кнопка мобільного меню через img html-- */
+.header-btn-mob-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: none;
+  stroke: var(--color-2e2f4);
+  background-color: transparent;
+  line-height: 0;
+  outline: 1px solid yellowgreen;
+}
+
+/* --Mobile-menu */
+
+.menu-mobile-btn-close {
+  /* position: absolute;
+  top: 24px;
+  right: 24px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  background-color: var(--color-e7e9fc);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+.menu-mobile-icon-close {
+  width: 8px;
+  height: 8px;
+}
+.menu-mobile-container {
+}
+/* ---------------опрацювати: */
+/* .modal-buy-now-input {
+  background-color: transparent;
+  filter: drop-shadow(0px 5.44492px 5.44492px rgba(0, 0, 0, 0.03));
+} */
+/* .modal-buy-now-input:focus {
+  outline: none;
+  border-color: var(--orange);
+} */
+/* .modal-buy-now-input:not(:focus):not(:placeholder-shown):valid {
+  border-color: green;
+} */
+/* .modal-buy-now-input:not(:focus):not(:placeholder-shown):invalid {
+  border-color: red;
+} */
