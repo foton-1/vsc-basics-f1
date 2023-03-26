@@ -63,8 +63,30 @@ input,
 textarea {
   outline: none;
 }
-/* -------------------Основні стилі Components*/
-
+/* -------------------------------------Components--- */
+.container {
+  padding: 0 15px 0 15px;
+  margin: 0px auto;
+  max-width: 1180px;
+  outline: 2px solid rebeccapurple;
+}
+/* .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+} */
+/* .no-scroll {
+  overflow: hidden;
+} */
+/* -------------------Основні стилі */
+/* ------------------------Header---- */
 .header {
   position: fixed;
   width: 100%;
@@ -83,21 +105,17 @@ textarea {
   background-color: #790f70;
   z-index: 3;
 }
-.container {
-  padding: 15px;
-  margin: 0px auto;
-  max-width: 1180px;
-  outline: 2px solid rebeccapurple;
-}
+
 .header-body {
   position: relative;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 0 10px 0;
 }
 .header-logo {
-  flex: 0 0 60px;
+  /* flex: 0 0 60px; */
+  width: 50px;
   border-radius: 50%;
   overflow: hidden;
   position: relative;
@@ -105,16 +123,35 @@ textarea {
 }
 .header-logo img {
   max-width: 100%;
-  /* display: block; */
-}
-.header-burger {
 }
 .header-navigation {
+  background-color: #5cf673;
 }
-/* --Бургер через бефор-- */ /* Кнопка мобільного меню через бефор css */
+
+.header-navig-list {
+  display: flex;
+  position: relative;
+  z-index: 3;
+}
+.header-navig-item {
+  margin: 0 20px 0 0;
+}
+.header-navig-link {
+}
+.header-address-list {
+  position: relative;
+  z-index: 3;
+}
+
+/* --Кнопка Бургер, стилізація через бефор-- */
 @media screen and (max-width: 767px) {
   .header-body {
-    padding: 5px;
+    padding: 5px 0 5px 0;
+  }
+  .header-logo {
+    /* flex: 0 0 60px; */
+    width: 40px;
+    z-index: 3;
   }
   .header-burger {
     display: block;
@@ -148,54 +185,53 @@ textarea {
   .header-burger:after {
     bottom: 0;
   }
+  /* --------------------------------Меню бургера */
   .header-navigation {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #5cf673;
+    background-color: #1aad90;
+    padding-top: 70px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .header-navig-list {
+    display: block;
+  }
+  .header-navig-item {
+    margin: 0 0 10px 0;
+  }
+  .header-address {
+    position: fixed;
+    background-color: #7989f7;
+    margin-top: 300px;
+  }
+  .header-address-item {
+    margin-bottom: 10px;
   }
 }
+/* Закінчити меню з застосування джава скриптів, зупинився на 15:35 хв відео з фрілансер по жизни "Правильное адаптивное меню бургер на  html */
+/* ------------------------------------------------ */
 
-.header-navig-list {
-  display: flex;
-}
-.header-navig-item {
-  margin: 0 20px 0 0;
-}
-.header-navig-link {
+/* .header-navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+  } */
+
+/* .header-navig-link {
   color: beige;
   text-transform: uppercase;
-}
+} */
 
-/* -------------------- */
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-.no-scroll {
-  overflow: hidden;
-}
 /* ------------------------Header---- */
-
-.logo-header {
-  width: ;
-}
-.header-navigation {
-  outline: 1px solid red;
-}
 /* --Кнопка мобільного меню через img html-- */
-.header-btn-mob-menu {
+/* .header-btn-mob-menu {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -205,14 +241,14 @@ textarea {
   background-color: transparent;
   line-height: 0;
   outline: 1px solid yellowgreen;
-}
+} */
 
-/* --Mobile-menu */
+/* ------------Mobile-menu окреме в html*/
 
-.menu-mobile-btn-close {
-  /* position: absolute;
+/* .menu-mobile-btn-close {
+  position: absolute;
   top: 24px;
-  right: 24px; */
+  right: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -222,13 +258,12 @@ textarea {
   background-color: var(--color-e7e9fc);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-}
-.menu-mobile-icon-close {
+} */
+/* .menu-mobile-icon-close {
   width: 8px;
   height: 8px;
-}
-.menu-mobile-container {
-}
+} */
+
 /* ---------------опрацювати: */
 /* .modal-buy-now-input {
   background-color: transparent;
@@ -244,3 +279,8 @@ textarea {
 /* .modal-buy-now-input:not(:focus):not(:placeholder-shown):invalid {
   border-color: red;
 } */
+
+/* ------------------------Hero */
+.text-hero {
+  padding-top: 90px;
+}
